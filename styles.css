@@ -78,11 +78,19 @@ header {
 }
 
 /* Main */
+
+main {
+    max-width: 1050px;         /* Restricts the text content area width */
+    margin: 30px auto;         /* "auto" on left/right handles the centering; 30px adds top/bottom breathing room */
+    padding: 0 20px;           /* Subtle inner safety padding for smaller screen/mobile views */
+    box-sizing: border-box;
+}
 .main-h2 {
   text-align: left;
   font: Arial, Helvetica, sans-serif;
   font-size: 2em;
   color: #9ed034;
+  
 }
 /* Partners */
 section {
@@ -173,6 +181,10 @@ caption {
 thead {
   background: #bde1ff;
 }
+thead th:first-child {
+    background-color: #436bbd; 
+    color: #ffffff;            
+}
 tbody {
   background: #eeffe6;
   text-align: center;
@@ -202,11 +214,14 @@ td:first-child {
   color: #555555;
   line-height: 1.6;
   margin-bottom: 25px;
+    
 }
 .contactinfo {
   margin-bottom: 30px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
+  
+  
 }
 .contactinfo .phone,
 .contactinfo .email {
@@ -218,14 +233,17 @@ td:first-child {
   margin-right: 5px;
 }
 #contact fieldset {
-  border: 2px solid #cbd485; /* Light greenish-yellow border */
+  border: 2px solid #cbd485; 
   border-radius: 4px;
   padding: 25px 30px;
   margin-bottom: 40px;
   font-family: Arial, Helvetica, sans-serif;
+  
+}
+
 }
 #contact legend {
-  color: #3b5998; /* Deep blue text */
+  color: #3b5faf; 
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
@@ -276,11 +294,11 @@ td:first-child {
 .button {
   display: flex;
   justify-content: center;
-  max-width: 500px; /* Keeps the button centered with inputs */
+  max-width: 500px; 
   margin-top: 20px;
 }
 .button input[type="submit"] {
-  background-color: #436bbd; /* Medium-blue background */
+  background-color: #436bbd; 
   color: #ffffff;
   border: none;
   padding: 10px 30px;
@@ -293,4 +311,43 @@ td:first-child {
 
 .button input[type="submit"]:hover {
   background-color: #345596;
+}
+main #album .photo img {
+  width: 500px;
+}
+#album {
+    list-style-type: none; 
+    padding-left: 0;       
+    margin: 0;
+}
+#album {
+    list-style-type: none;  
+    padding-left: 0;        
+    margin: 30px auto;
+    max-width: 1000px;     
+    
+    /* Creates the 2x2 Grid grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;                    
+}
+#album .photo {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+#album .cliff-title {
+    background-color: #85201B; 
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 0;
+    display: block;
+}
+#album .photo img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
